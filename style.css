@@ -77,7 +77,6 @@ body {
 }
 
 .caja-resultado {
-    width: 90%;
     height: 95%;
     background-color: white;
     border-radius: 3em;
@@ -91,6 +90,8 @@ body {
 .caja-preresultado img {
     position: relative;
     left: 2.3em;
+    /* width: 73.5%;
+    margin: 0 auto; */
 }
 
 .texto-preresultado h2 {
