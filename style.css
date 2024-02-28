@@ -1,0 +1,75 @@
+body {
+    background: #F3F5FC;
+}
+
+.logo {
+    margin: 40px 0 0 40px;
+}
+
+.ingresa-texto {
+    margin: 128px 0 0 240px;
+}
+
+.advertencia {
+    margin: 683px 0 0 240px;
+    color: #495057;
+}
+
+.botones {
+    margin: 0 0 0 240px;
+}
+
+.botones input {
+    display: inline;
+    width: 328px;
+    height: 67px;
+    margin: 0 24px 0 0;
+}
+
+.encriptar {
+    color: white;
+    background: #0A3871;
+}
+
+.desencriptar {
+    background: #D8DFE8
+    
+}
+
+.resultado {
+    width: 400px;
+    height: 944px;
+    background: white;
+    border-radius: 32px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+.caja-preresultado {
+    position: relative;
+    top: 233.6px;
+}
+
+.caja-preresultado img {
+    width: auto;
+    margin: 32px;
+}
+
+.texto-preresultado {
+    font-family: "Inter", sans-serif;
+    width: 336px;
+    margin: 0 auto;
+}
+
+.texto-preresultado h2 {
+    color: #343A40;
+    margin: 0 0 16px 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.texto-preresultado p {
+    color: #495057;
+    font-size: 16px;
+}
