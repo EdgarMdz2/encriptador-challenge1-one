@@ -91,6 +91,7 @@ body {
 
 .caja-resultado {
     height: 100%;
+    /* width: 30rem; */
     background-color: white;
     border-radius: 3em;
 }
@@ -100,11 +101,16 @@ body {
     top: 15%;
 }
 
+.contenedor-resultado p {
+    color:#495057;
+    font-size: 22px;
+    margin: 10%;
+    /* display: none; */
+}
+
 .caja-preresultado img {
     position: relative;
     left: 3.8em;
-    /* width: 73.5%;
-    margin: 0 auto; */
 }
 
 .texto-preresultado h2 {
@@ -121,5 +127,3 @@ body {
     text-align: center;
     padding: 0 2em;
 }
-
-

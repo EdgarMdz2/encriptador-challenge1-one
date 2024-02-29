@@ -20,7 +20,7 @@
                 <div class="caja-input">
                     <form>
                     <div class="ingresa-texto">
-                            <textarea placeholder="Ingrese el texto aquí"></textarea>
+                            <textarea placeholder="Ingrese el texto aquí" id="textoUsuario"></textarea>
                     </div>
                     
                     <div class="caja-alert">
@@ -29,8 +29,10 @@
                     </div>
                     
                     <div class="botones">
-                        <input type="button" value="Encriptar" class="encriptar">
-                        <input type="button" value="Desencriptar" class="desencriptar">
+                        <button id="btnEncriptar" class="encriptar">Encriptar</button>
+                        <!-- <input type="button" value="Encriptar" class="encriptar"> -->
+                        <button id="btnDesencriptar" class="desencriptar">Desencriptar</button>
+                        <!-- <input type="button" value="Desencriptar" class="desencriptar"> -->
                     </div>
                     </form>
                 </div>
@@ -38,6 +40,9 @@
         
             <section class="seccion2">
                 <div class="caja-resultado">
+                    <div class="contenedor-resultado">
+                        <p id="textoResultado" class="texto-resultado"></p>
+                    </div>
                     <div class="caja-preresultado">
                         <img src="img/Muñeco.png" alt="Muñeco">
                         <div class="texto-preresultado">
@@ -47,12 +52,10 @@
                     </div>
                     <!-- <div>
                         <input type="button" value="Copiar" class="copiar">
-                    </div>
-                    <div>
-                        <p></p>
                     </div> -->
                 </div>
             </section>
         </main>
     </body>
+    <script src="script.js"></script>
 </html>
