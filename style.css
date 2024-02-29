@@ -7,16 +7,16 @@ body {
     display: flex;
 }
 
-.izq {
+.seccion1 {
     width: 65%;
 }
 
-.izq img {
+.logo {
     margin: 40px 0 0 40px;
 }
 
 .caja-input {
-    margin: 5em 0 0 17.5em;
+    margin: 5em 0 0 17em;
     width: 60%;
 }
 
@@ -40,9 +40,22 @@ body {
     font-size: 22px;
 }
 
-.advertencia {
+.caja-alert {
+    margin: 0 0 1em 0;
+    display: flex;
+
+}
+
+.sym-alert {
+    display: inline;
+}
+
+.alert {
+    display: inline;
+    height: 16px;
     font-size: 12px;
     color: #495057;
+    margin: 0 0 0 0.5em;
 }
 
 .encriptar , .desencriptar {
@@ -69,15 +82,16 @@ body {
 
 /* Código caja resultado */
 
-.resultado {
+.seccion2 {
     width: 30%;
+    margin: 40px 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .caja-resultado {
-    height: 95%;
+    height: 100%;
     background-color: white;
     border-radius: 3em;
 }
