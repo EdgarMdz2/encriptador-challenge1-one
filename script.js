@@ -11,9 +11,9 @@ function convertirArray() {
     return arrayTexto;
 }
 
-function encriptar () {
+function encriptar (event) {
     event.preventDefault(); //Evita que la página se recargue
-    let arrayTexto = convertirArray(); //Declarando variable con el valor que retorna la función
+    let arrayTexto = convertirArray(); //Declarando variable con el valor que retorna la función "convertirArray"
     for (let i = 0; i < arrayTexto.length; i++) { //Recorriendo array y modificando los valores
         if (arrayTexto[i] == 'a') {
             arrayTexto[i] = 'ai';
@@ -27,16 +27,16 @@ function encriptar () {
             arrayTexto[i] = 'ufat';
         }
     }
-    let valorDespuesEncriptado = arrayTexto.join(''); //El array resultante se convierte denuevo a string
-    document.getElementById('textoResultado').innerText=valorDespuesEncriptado; //.innerText asigna el valorDepuesEncriptado al elemento "textoResultado"
-    // Falta ocultar .caja-preresultado y activar display de <p>
+    const valorDespuesEncriptado = arrayTexto.join(''); //El array resultante se convierte denuevo a string
+    document.getElementById('textoResultado').innerText = valorDespuesEncriptado; //.innerText asigna el valorDepuesEncriptado al elemento "textoResultado"
+    // Falta ocultar .caja-preresultado y activar display block de <p>
 }
 
-function desencriptar () {
+function desencriptar (event) {
     event.preventDefault();
-    let arrayTexto = convertirArray();
-    for (let i = 0; i < arrayTexto.length; i++) {
-        if (arrayTexto[i] == 'a' || arrayTexto[i] == 'e' || arrayTexto[i] == 'i' || arrayTexto[i] == 'o' || arrayTexto[i] == 'u' ) {
+    let arrayTexto = convertirArray(); //Declarando variable con el valor que retorna la función "convertirArray"
+    for (let i = 0; i < arrayTexto.length; i++) { //Recorriendo array y modificando los valores
+        if (arrayTexto[i] == 'a' || arrayTexto[i] == 'e' || arrayTexto[i] == 'i' || arrayTexto[i] == 'o' || arrayTexto[i] == 'u' ) { //Al encontrar una vocal...
             if (arrayTexto[i] == 'a' && arrayTexto[i+1] == 'i') {
                 arrayTexto.splice(i+1,1);
                 console.log(arrayTexto);
@@ -53,11 +53,9 @@ function desencriptar () {
             else if (arrayTexto[i] == 'u' && arrayTexto[i+1] == 'f' && arrayTexto[i+2] == 'a' && arrayTexto[i+3] == 't') {
                 arrayTexto.splice(i+1,3);
             }
-        } else {
-            arrayTexto[i] = arrayTexto[i];
-        }
+        } 
     }
-    let valorDespuesDesencriptado = arrayTexto.join('');
-    document.getElementById('textoResultado').innerText=valorDespuesDesencriptado;
-    // ocultar .caja-preresultado
+    const valorDespuesDesencriptado = arrayTexto.join(''); //El array resultante se convierte denuevo a string
+    document.getElementById('textoResultado').innerText = valorDespuesDesencriptado; //.innerText asigna el valorDepuesEncriptado al elemento "textoResultado"
+    // Falta ocultar .caja-preresultado y activar display block de <p>
 }

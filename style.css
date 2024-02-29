@@ -101,11 +101,11 @@ body {
     top: 15%;
 }
 
-.contenedor-resultado p {
+.texto-resultado {
     color:#495057;
     font-size: 22px;
     margin: 10%;
-    /* display: none; */
+    display: none;
 }
 
 .caja-preresultado img {
