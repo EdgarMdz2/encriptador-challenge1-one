@@ -1,9 +1,12 @@
 let textoUsuario = document.getElementById('textoUsuario'); //Asignando el texto ingresado a una variable
 let botonEncriptar = document.getElementById('btnEncriptar'); //Asignando botón a una variable
 let botonDesencriptar = document.getElementById('btnDesencriptar'); //Asignando botón a una variable
+let botonCopiar = document.getElementById('btnCopiar');
 
 botonEncriptar.onclick = encriptar; //Al hacer click, ejecutar función encriptar
 botonDesencriptar.onclick = desencriptar; //Al hacer click, ejecutar función desencriptar
+botonCopiar.onclick = copiarTexto; //Al hacer click, ejecutar función copiarTexto
+
 
 function convertirArray() {
     let valorTextoUsuario = textoUsuario.value; //Variable toma el valor (string) del textarea
@@ -14,14 +17,16 @@ function convertirArray() {
 function cambioPantalla() { // ocultar .caja-preresultado y activar display block de <p>
     document.getElementById('textoResultado').style = 'display: block';
     document.getElementById('cajaPreresultado').style = 'display: none';
+    document.getElementById('btnCopiar').style = 'display: block';
 }
 
 function reestablecerPantalla() { // mostrar .caja-preresultado y activar display none de <p>
     document.getElementById('textoResultado').style = 'display: none';
     document.getElementById('cajaPreresultado').style = 'display: block';
+    document.getElementById('btnCopiar').style = 'display: none';
 }
 
-function evaluarAcentos(texto){ //Evalúa la presencia de acentos en el texto
+function evaluarAcentos(texto){ //Evalúa la presencia de acentos y mayúsculas en el texto
     const regex = /[A-Z\u00C0-\u00FF]/;
     if (regex.test(texto)) {
         return true;
@@ -32,7 +37,7 @@ function evaluarAcentos(texto){ //Evalúa la presencia de acentos en el texto
 
 function encriptar (event) {
     event.preventDefault(); //Evita que la página se recargue
-    let arrayTexto = convertirArray(); //Declarando variable con el valor que retorna la función "convertirArray"
+    let arrayTexto = convertirArray(); //Declarando variable que almacena el valor que retorna la función "convertirArray"
     if (arrayTexto == '' || evaluarAcentos(textoUsuario.value)) {
         alert('Ingresa un texto para encriptar. Solo letras minúsculas y sin acentos.');
         reestablecerPantalla(); // mostrar .caja-preresultado y activar display none de <p>
@@ -91,4 +96,11 @@ function desencriptar (event) {
         document.getElementById('textoResultado').innerText = valorDespuesDesencriptado; //.innerText asigna el valorDepuesEncriptado al elemento "textoResultado"
         cambioPantalla(); // Ocultar .caja-preresultado y activar display block de <p>
     }
+}
+
+let textoResultado = document.getElementById('textoResultado');
+
+function copiarTexto() {
+    let textoCopiado = textoResultado.textContent;
+    navigator.clipboard.writeText(textoCopiado);
 }
