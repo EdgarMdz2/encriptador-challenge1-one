@@ -11,25 +11,34 @@ function convertirArray() {
     return arrayTexto;
 }
 
+function cambioPantalla() { // ocultar .caja-preresultado y activar display block de <p>
+    document.getElementById('textoResultado').style = 'display: block';
+    document.getElementById('cajaPreresultado').style = 'display: none';
+}
+
 function encriptar (event) {
     event.preventDefault(); //Evita que la página se recargue
     let arrayTexto = convertirArray(); //Declarando variable con el valor que retorna la función "convertirArray"
     for (let i = 0; i < arrayTexto.length; i++) { //Recorriendo array y modificando los valores
         if (arrayTexto[i] == 'a') {
             arrayTexto[i] = 'ai';
-        } else if (arrayTexto[i] == 'e') {
+        } 
+        else if (arrayTexto[i] == 'e') {
             arrayTexto[i] = 'enter';
-        } else if (arrayTexto[i] == 'i') {
+        } 
+        else if (arrayTexto[i] == 'i') {
             arrayTexto[i] = 'imes';
-        } else if (arrayTexto[i] == 'o') {
+        } 
+        else if (arrayTexto[i] == 'o') {
             arrayTexto[i] = 'ober';
-        } else if (arrayTexto[i] == 'u') {
+        } 
+        else if (arrayTexto[i] == 'u') {
             arrayTexto[i] = 'ufat';
         }
     }
     const valorDespuesEncriptado = arrayTexto.join(''); //El array resultante se convierte denuevo a string
     document.getElementById('textoResultado').innerText = valorDespuesEncriptado; //.innerText asigna el valorDepuesEncriptado al elemento "textoResultado"
-    // Falta ocultar .caja-preresultado y activar display block de <p>
+    cambioPantalla(); // Ocultar .caja-preresultado y activar display block de <p>
 }
 
 function desencriptar (event) {
@@ -57,5 +66,5 @@ function desencriptar (event) {
     }
     const valorDespuesDesencriptado = arrayTexto.join(''); //El array resultante se convierte denuevo a string
     document.getElementById('textoResultado').innerText = valorDespuesDesencriptado; //.innerText asigna el valorDepuesEncriptado al elemento "textoResultado"
-    // Falta ocultar .caja-preresultado y activar display block de <p>
+    cambioPantalla(); // Ocultar .caja-preresultado y activar display block de <p>
 }
