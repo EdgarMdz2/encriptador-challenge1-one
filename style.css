@@ -1,38 +1,45 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+
 body {
     background: #F3F5FC;
-    font-family: "Inter", sans-serif;
 }
 
 .general {
     display: flex;
 }
 
+/* Estilos Sección 1 (Izquierda) */
+
 .seccion1 {
-    width: 65%;
+    width: 69.44%;
 }
 
 .logo {
-    margin: 40px 0 0 40px;
+    margin: 3.91% 0 0 2.78%;
 }
 
 .caja-input {
-    margin: 5em 0 0 17em;
-    width: 60%;
+    margin: 7.81% 0 0 24%;
+    /* display: flex-box; */
 }
 
 .ingresa-texto {
-    margin: 3em 0 0 0;
+    width: 68%;
+    height: 390px;
 }
 
 .ingresa-texto textarea {
-    width: 99.36%;
-    height: 16em;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
     resize: none;
     border: 0;
     background: #F3F5FC;
     color: #0A3871;
     font-size: 22px;
-    font-family: "Inter", sans-serif;
 }
 
 .ingresa-texto textarea::placeholder {
@@ -41,35 +48,35 @@ body {
 }
 
 .caja-alert {
-    margin: 1em 0;
     display: flex;
-}
-
-.sym-alert {
-    display: inline;
+    align-items: end;
+    margin: 0 0 1.56% 0;
 }
 
 .alert {
-    display: inline;
-    height: 16px;
+    margin: 0 0 0 0.8%;
     font-size: 12px;
     color: #495057;
-    margin: 0 0 0 0.5em;
 }
 
-.encriptar , .desencriptar, .copiar {
-    width: 15em;
+.botones {
+    width: 68%;
     height: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.encriptar , .desencriptar {
+    width: 48.24%;
+    height: 100%;
     border-style: solid;
     border-radius: 24px;
     border-color: #0A3871;
-    font-family: "Inter", sans-serif;
     font-size: 18px;
     font-weight: 600;
 }
 
 .encriptar {
-    margin: 0 1.5em 0 0;
     background: #0A3871;
     color: white;
 }
@@ -79,60 +86,71 @@ body {
     color: #0A3871;
 }
 
-/* Código caja resultado */
+/* Estilos Sección 2 (Derecha) */
 
 .seccion2 {
-    width: 30%;
-    margin: 1.5em 0 0 0;
+    width: 30.66%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .caja-resultado {
-    height: 40em;
-    width: 30em;
-    background-color: white;
+    background: white;
+    width: 90%;
+    height: 43.5em;
     border-radius: 3em;
 }
 
-.caja-preresultado {
-    position: relative;
-    top: 12%;
+.contenedor-resultado {
+    margin: 10% 10% 0 10%;
+    height: 90%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .texto-resultado {
     color:#495057;
     font-size: 22px;
-    margin: 10%;
-    display: none;
+}
+
+.copiar {
+    border-style: solid;
+    border-radius: 24px;
+    border-color: #0A3871;
+    background: white;
+    color: #0A3871;
+    font-size: 18px;
+    font-weight: 600;
+    width: 82.55%;
+    height: 4em;
+    align-self: center;
+}
+
+.caja-preresultado {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .caja-preresultado img {
-    position: relative;
-    left: 3.8em;
+    width: 50%;
+    margin: 0 0 3em 0;
 }
 
 .texto-preresultado h2 {
     color: #343A40;
     text-align: center;
     font-weight: bold;
-    font-size: 24px;
-    padding: 0 2em;
+    margin: 0 0 0.5em 0;
+    padding: 0 10%;
 }
 
 .texto-preresultado p {
     color: #495057;
     font-size: 16px;
     text-align: center;
-    padding: 0 2em;
-}
-
-.copiar {
-    position: absolute;
-    top: 84.6%;
-    left: 71.3%;
-    background: white;
-    color: #0A3871;
-    display: none;
+    padding: 0 10%;
 }

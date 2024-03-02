@@ -15,15 +15,13 @@ function convertirArray() {
 }
 
 function cambioPantalla() { // ocultar .caja-preresultado y activar display block de <p>
-    document.getElementById('textoResultado').style = 'display: block';
     document.getElementById('cajaPreresultado').style = 'display: none';
-    document.getElementById('btnCopiar').style = 'display: block';
+    document.getElementById('contenedorResultado').style = 'display: flex';
 }
 
 function reestablecerPantalla() { // mostrar .caja-preresultado y activar display none de <p>
-    document.getElementById('textoResultado').style = 'display: none';
-    document.getElementById('cajaPreresultado').style = 'display: block';
-    document.getElementById('btnCopiar').style = 'display: none';
+    document.getElementById('cajaPreresultado').style = 'display: flex';
+    document.getElementById('contenedorResultado').style = 'display: none';
 }
 
 function evaluarAcentos(texto){ //Evalúa la presencia de acentos y mayúsculas en el texto
