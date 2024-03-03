@@ -7,7 +7,6 @@ botonEncriptar.onclick = encriptar; //Al hacer click, ejecutar función encripta
 botonDesencriptar.onclick = desencriptar; //Al hacer click, ejecutar función desencriptar
 botonCopiar.onclick = copiarTexto; //Al hacer click, ejecutar función copiarTexto
 
-
 function convertirArray() {
     let valorTextoUsuario = textoUsuario.value; //Variable toma el valor (string) del textarea
     let arrayTexto = valorTextoUsuario.split(''); //Variable que almacena el string convertido en array
