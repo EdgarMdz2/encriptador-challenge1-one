@@ -58,7 +58,7 @@ function encriptar (event) {
         }
         const valorDespuesEncriptado = arrayTexto.join(''); //El array resultante se convierte denuevo a string
         document.getElementById('textoResultado').innerText = valorDespuesEncriptado; //.innerText asigna el valorDepuesEncriptado al elemento "textoResultado"
-        cambioPantalla(); // Ocultar .caja-preresultado y activar display block de <p>
+        cambioPantalla(); // Ocultar .caja-preresultado y activar display flex de <p>
     }
 }
 
@@ -73,7 +73,6 @@ function desencriptar (event) {
             if (arrayTexto[i] == 'a' || arrayTexto[i] == 'e' || arrayTexto[i] == 'i' || arrayTexto[i] == 'o' || arrayTexto[i] == 'u' ) { //Al encontrar una vocal...
                 if (arrayTexto[i] == 'a' && arrayTexto[i+1] == 'i') {
                     arrayTexto.splice(i+1,1);
-                    console.log(arrayTexto);
                 }
                 else if (arrayTexto[i] == 'e' && arrayTexto[i+1] == 'n' && arrayTexto[i+2] == 't' && arrayTexto[i+3] == 'e' && arrayTexto[i+4] == 'r') {
                     arrayTexto.splice(i+1,4);
